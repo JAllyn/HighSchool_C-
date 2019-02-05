@@ -1,0 +1,91 @@
+// Einstein.cpp : Defines the entry point for the console application.
+//
+
+#include "stdafx.h"
+#include <iomanip>
+#include <iostream>
+#include <string>
+
+using namespace std; 
+
+int main()
+{//begin main
+	int cont;
+	int x = 0,
+		y = 0,
+		a = 0,
+		z = 0,
+		b = 0;
+
+	cout<<setw(45)<<"Welcome to Einstein's"
+		<<setw(77)<<"Number Game\n\n"<<endl;
+
+
+	cout<<setw(50)<<"********************************"<<endl;
+	cout<<setw(50)<<"To play the game you are going\n"
+		<<setw(50)<<"to enter a THREE DIGIT number\n"
+	    <<setw(50)<<"and the FIRST AND LAST number\n"
+		<<setw(44)<<"MUST differ by TWO\n"
+		<<setw(47)<<"The number MUST be POSITIVE"<<endl;
+	cout<<setw(51)<<"********************************\n"<<endl;
+	system("pause");
+	system("cls");
+
+	
+	do
+	{
+	cout<<"\n"<<setw(40)<<"Please enter your three digit number: ";
+	cin>>x;
+
+	cout<<"\n"<<setw(47)<<"Please enter the same number but in reverse: ";
+	cin>>y;
+
+	system("cls");
+
+	cout<<"\n"<<setw(37)<<"The two numbers you entered were "<<x<<" and "<<y<<"\n"<<endl;
+	
+	a = y - x;
+
+	if(a<0)
+	{
+	a = a * -1;
+
+	cout<<setw(53)<<"The difference of the two numbers was multiplied\n"
+		<<setw(45)<<"by -1 because the difference was negative"<<endl;
+	}
+	cout<<"\n"<<setw(48)<<"The difference between these two numbers is "<<a<<endl;
+
+	cout<<"\n"<<setw(41)<<"Now enter the difference in reverse: ";
+	cin>>z;
+
+	
+	system("cls");
+
+	cout<<"\n"<<setw(40)<<"The two numbers you entered were "<<a<<" and "<<z<<endl;
+
+
+	b = a + z;
+	cout<<"\n"<<setw(40)<<"The sum of these two numbers is: "<<b<<endl;
+	cout<<"\n";
+	
+
+	cout<<setw(44)<<"If you would like to run the program\n"
+		<<setw(43)<<"press 1 or you can press 0 to exit: ";
+	cin>>cont;
+
+	if (cont==1)
+	{
+		system("cls");
+	}
+	else
+	{
+	
+	system("cls");
+
+	cout<<"End of Run - Jack Allyn"<<endl;
+
+	}
+	}while(cont == 1);
+	return 0;
+}//end main
+
